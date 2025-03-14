@@ -1,4 +1,20 @@
 # Introduction
+Abstract： The core of the Particle Flow (PFlow) algorithms in High Energy Physics experiments
+lies in reconstructing the intrinsic nature and kinematic properties of both charged and neutral
+particles, utilizing the data provided by detectors. Through effective trajectory analysis methods
+for various particle types, it becomes evident that the magnetic ffeld signiffcantly inffuences the
+accuracy of ffnal reconstruction efforts. In this paper, we present several computer vision models
+aimed at enhancing PFlow algorithms. We employ a Multilayer Perceptron (MLP) to address
+scenarios where no magnetic forces interfere with particle tracks. Subsequently, we conduct
+a comprehensive discussion and comparison of the experimental results obtained from various
+enhanced Convolutional Neural Network (CNN) models, such as Polar Coordinate Processing,
+Parameterized Differential Operators (PDOs), Cylindrically Sliding Windows (CSW), tailored to
+the characteristics of our datasets.
+
+The publication can be accessed at the following link: https://eudl.eu/doi/10.4108/eai.21-11-2024.2354620.
+
+A brief introduction to the code：
+
 1. The **Simulated Dataset Generator** comprises two distinct codes, labeled "yes" and "no". As detailed in the paper, the primary distinction between these codes lies in the adjustment of the phi value within the range of [-π, π] at line 93 of the "yes" code, which is absent in the "no" code. Consequently, the performance of "no" deteriorates as the shifted energy simply dissipates, and a greater proportion of energy is displaced beyond the image boundaries as B increases. Readers can generate datasets by themselves based on the "yes" and "no" code.  Magnetic field strength can be adjusted by changing the parameter of KBField at line 11. For example, in our paper, we use 0.00, 0.05, 0.10, 0.25, 0.35, 0.50, 0.75, 0.90, 1.00, 1.20, 1.40 and 1.50.
 
 2. The **imageplotter** section contains the code responsible for generating comparative plots and tables of various standard deviations (std).
@@ -7,4 +23,4 @@
 
 4. The **model** section encapsulates all the models referenced in our research paper.
 
-The results of our dataset processed by different models can be found and downloaded via the following link, totaling approximately 66 GB：https://pan.baidu.com/s/1AmdKyAnnuyBc1w7dejrMOg?pwd=gty4
+The results of our dataset processed by different models can be found and downloaded via the following link, totaling approximately 66 GB，readers can download if you are interested：https://pan.baidu.com/s/1AmdKyAnnuyBc1w7dejrMOg?pwd=gty4
